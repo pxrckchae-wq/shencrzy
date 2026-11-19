@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>my little gallery · shayne.com</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=DM+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&family=Fraunces:ital,wght@0,400;0,600;1,600&family=Nunito:wght@400;700&display=swap">
+<style>
+/* shayne.com gallery — edit colors here */
+:root{--cream:#fbf6ec;--paper:#fffdf7;--blush:#f4c9cf;--blush-d:#e8a5b0;--sage:#a9b891;--sage-d:#6b7a4f;--butter:#f6e7a8;--ink:#4a3f33;--olive:#4f5a38}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font:17px/1.6 "Nunito",system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;
+background-color:#fbf6ec;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22340%22%20height%3D%22340%22%3E%3Cpath%20d%3D%22M62.0%2070.0%20L62.5%2070.2%20L62.9%2070.7%20L62.8%2071.5%20L62.3%2072.2%20L61.4%2072.8%20L60.2%2072.9%20L58.9%2072.4%20L57.7%2071.3%20L56.9%2069.7%20L56.8%2067.7%20L57.5%2065.7%20L59.0%2063.9%20L61.3%2062.7%20L64.0%2062.4%20L66.9%2063.1%20L69.5%2064.9%20L71.3%2067.7%20L72.1%2071.1%20L71.6%2074.8%20L69.7%2078.3%20L66.6%2081.0%20L62.5%2082.4%20L58.0%2082.4%20L53.6%2080.6%20L49.9%2077.3%20L47.6%2072.8%20L46.9%2067.5%20L48.3%2062.1%20L51.5%2057.4%20L56.3%2054.0%20L62.2%2052.5%20L68.5%2053.1%20L74.4%2056.0%20L78.9%2060.9%20L81.6%2067.3%20L81.9%2074.4%20L79.6%2081.4%20L74.9%2087.2%20L68.2%2091.1%20L60.5%2092.6%20L52.5%2091.1%20L45.3%2086.9%20L40.0%2080.3%20L37.2%2072.0%20L37.5%2063.1%20L41.0%2054.7%22%20fill%3D%22none%22%20stroke%3D%22%23a9b891%22%20stroke-width%3D%221.4%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.42%22/%3E%3Cpath%20d%3D%22M250.0%20236.0%20L250.4%20236.1%20L250.7%20236.5%20L250.8%20237.1%20L250.5%20237.7%20L250.0%20238.2%20L249.2%20238.5%20L248.2%20238.5%20L247.2%20238.0%20L246.3%20237.2%20L245.7%20236.0%20L245.5%20234.5%20L245.8%20232.9%20L246.7%20231.4%20L248.1%20230.2%20L250.0%20229.5%20L252.1%20229.4%20L254.3%20230.0%20L256.3%20231.4%20L257.9%20233.4%20L258.7%20236.0%20L258.7%20238.8%20L257.7%20241.6%20L255.9%20244.1%20L253.2%20245.9%20L250.0%20246.9%20L246.5%20246.8%20L243.1%20245.5%20L240.2%20243.2%20L238.0%20239.9%20L237.0%20236.0%20L237.2%20231.8%20L238.7%20227.8%20L241.6%20224.4%20L245.4%20221.9%20L250.0%20220.8%20L254.8%20221.1%20L259.5%20223.0%20L263.4%20226.3%20L266.1%20230.8%20L267.4%20236.0%20L267.0%20241.5%20L264.8%20246.7%20L261.0%20251.1%20L255.9%20254.2%20L250.0%20255.6%20L243.8%20255.0%22%20fill%3D%22none%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%221.4%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.38%22/%3E%3Cg%20fill%3D%22%23f4c9cf%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%22.8%22%20opacity%3D%220.55%22%3E%3Ccircle%20cx%3D%22191.0%22%20cy%3D%2240.0%22%20r%3D%225.6%22/%3E%3Ccircle%20cx%3D%22184.8%22%20cy%3D%2248.6%22%20r%3D%225.6%22/%3E%3Ccircle%20cx%3D%22174.7%22%20cy%3D%2245.3%22%20r%3D%225.6%22/%3E%3Ccircle%20cx%3D%22174.7%22%20cy%3D%2234.7%22%20r%3D%225.6%22/%3E%3Ccircle%20cx%3D%22184.8%22%20cy%3D%2231.4%22%20r%3D%225.6%22/%3E%3Ccircle%20cx%3D%22182%22%20cy%3D%2240%22%20r%3D%224.0%22%20fill%3D%22%23f6e7a8%22%20stroke%3D%22none%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23f4c9cf%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%22.8%22%20opacity%3D%220.5%22%3E%3Ccircle%20cx%3D%22307.0%22%20cy%3D%22112.0%22%20r%3D%224.3%22/%3E%3Ccircle%20cx%3D%22302.2%22%20cy%3D%22118.7%22%20r%3D%224.3%22/%3E%3Ccircle%20cx%3D%22294.3%22%20cy%3D%22116.1%22%20r%3D%224.3%22/%3E%3Ccircle%20cx%3D%22294.3%22%20cy%3D%22107.9%22%20r%3D%224.3%22/%3E%3Ccircle%20cx%3D%22302.2%22%20cy%3D%22105.3%22%20r%3D%224.3%22/%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22112%22%20r%3D%223.1%22%20fill%3D%22%23f6e7a8%22%20stroke%3D%22none%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23f4c9cf%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%22.8%22%20opacity%3D%220.5%22%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%22252.0%22%20r%3D%225.0%22/%3E%3Ccircle%20cx%3D%2244.5%22%20cy%3D%22259.6%22%20r%3D%225.0%22/%3E%3Ccircle%20cx%3D%2235.5%22%20cy%3D%22256.7%22%20r%3D%225.0%22/%3E%3Ccircle%20cx%3D%2235.5%22%20cy%3D%22247.3%22%20r%3D%225.0%22/%3E%3Ccircle%20cx%3D%2244.5%22%20cy%3D%22244.4%22%20r%3D%225.0%22/%3E%3Ccircle%20cx%3D%2242%22%20cy%3D%22252%22%20r%3D%223.6%22%20fill%3D%22%23f6e7a8%22%20stroke%3D%22none%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23f4c9cf%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%22.8%22%20opacity%3D%220.45%22%3E%3Ccircle%20cx%3D%22156.0%22%20cy%3D%22186.0%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22151.9%22%20cy%3D%22191.7%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22145.1%22%20cy%3D%22189.5%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22145.1%22%20cy%3D%22182.5%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22151.9%22%20cy%3D%22180.3%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22150%22%20cy%3D%22186%22%20r%3D%222.7%22%20fill%3D%22%23f6e7a8%22%20stroke%3D%22none%22/%3E%3C/g%3E%3Cg%20fill%3D%22%23f4c9cf%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%22.8%22%20opacity%3D%220.4%22%3E%3Ccircle%20cx%3D%22311.0%22%20cy%3D%22310.0%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22306.9%22%20cy%3D%22315.7%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22300.1%22%20cy%3D%22313.5%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22300.1%22%20cy%3D%22306.5%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22306.9%22%20cy%3D%22304.3%22%20r%3D%223.7%22/%3E%3Ccircle%20cx%3D%22305%22%20cy%3D%22310%22%20r%3D%222.7%22%20fill%3D%22%23f6e7a8%22%20stroke%3D%22none%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28112%20282%29%20rotate%28-6%29%20scale%281%29%22%20fill%3D%22none%22%20stroke%3D%22%23a9b891%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.45%22%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%229%22/%3E%3Cpath%20d%3D%22M-8%20-4L-9%20-15L-2%20-9M8%20-4L9%20-15L2%20-9%22/%3E%3Cpath%20d%3D%22M-9%206C-16%2016-10%2026%200%2026C10%2026%2016%2016%209%206%22/%3E%3Cpath%20d%3D%22M10%2022C20%2024%2022%2014%2018%2010%22/%3E%3Cpath%20d%3D%22M-4%20-1q1.5%20-1.5%203%200M1%20-1q1.5%20-1.5%203%200%22%20stroke-width%3D%221%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28292%2036%29%20rotate%288%29%20scale%280.8%29%22%20fill%3D%22none%22%20stroke%3D%22%23e8a5b0%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20opacity%3D%220.4%22%3E%3Ccircle%20cx%3D%220%22%20cy%3D%220%22%20r%3D%229%22/%3E%3Cpath%20d%3D%22M-8%20-4L-9%20-15L-2%20-9M8%20-4L9%20-15L2%20-9%22/%3E%3Cpath%20d%3D%22M-9%206C-16%2016-10%2026%200%2026C10%2026%2016%2016%209%206%22/%3E%3Cpath%20d%3D%22M10%2022C20%2024%2022%2014%2018%2010%22/%3E%3Cpath%20d%3D%22M-4%20-1q1.5%20-1.5%203%200M1%20-1q1.5%20-1.5%203%200%22%20stroke-width%3D%221%22/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(rgba(169,184,145,.2) 1px,transparent 1px);background-size:340px 340px,22px 22px;background-repeat:repeat}
+body.lock{overflow:hidden}
+.hand{font-family:"Caveat","Segoe Print",cursive;font-size:1.35rem;color:var(--sage-d);margin:0}
+/* header (compact) */
+.head{position:relative;text-align:center;padding:18px 20px 16px;background:linear-gradient(120deg,var(--blush),var(--cream) 50%,var(--sage));border-bottom:3px dotted var(--sage-d);z-index:2}
+.head h1{font:italic 600 clamp(1.9rem,5vw,2.8rem)/1.1 "Fraunces",Georgia,serif;color:var(--olive);margin:0}
+.site{margin:0;font-weight:700;letter-spacing:.05em;color:var(--sage-d);font-size:.95rem}
+.doodle{position:absolute;left:4%;top:8px;width:64px}.head:after{content:"✦";position:absolute;right:6%;top:14px;color:#d9b84a;font-size:1.3rem}
+/* gallery grid: 3 columns × 4 rows on desktop */
+main{flex:1;max-width:1000px;width:100%;margin:0 auto;padding:30px 20px;position:relative;z-index:2}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{margin:0;background:var(--paper);border:1.5px solid var(--sage);border-radius:12px;padding:10px 10px 8px;box-shadow:0 3px 0 rgba(169,184,145,.45);position:relative;transition:transform .25s,border-color .25s}
+.card:before{content:"";position:absolute;top:-8px;left:50%;width:56px;height:16px;margin-left:-28px;background:rgba(246,231,168,.85);transform:rotate(-3deg);z-index:1;pointer-events:none}
+.card:hover{transform:translateY(-3px);border-color:var(--blush-d)}
+.thumb{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:8px;overflow:hidden}
+.thumb img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--blush)}
+.card figcaption{font-family:"Caveat","Segoe Print",cursive;font-size:1.2rem;color:var(--sage-d);text-align:center;padding-top:6px}
+:focus-visible{outline:3px solid var(--blush-d);outline-offset:3px;border-radius:8px}
+footer{text-align:center;padding:20px;color:var(--sage-d);font-size:.95rem;position:relative;z-index:2}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;padding:16px;background:rgba(62,58,38,.86);opacity:0;transition:opacity .25s}
+.lb[hidden]{display:none}.lb.open{opacity:1}
+.lb-fig{margin:0;text-align:center;color:#fdf6ec;min-width:0}
+.lb-img{display:block;margin:0 auto;max-width:100%;max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px);object-fit:contain;border-radius:6px;border:4px solid var(--paper);background:var(--paper);animation:swap .3s}
+@keyframes swap{from{opacity:.2}to{opacity:1}}
+.lb-fig figcaption{margin-top:10px}.lb-cap{font-family:"Caveat","Segoe Print",cursive;font-size:1.4rem}.lb-count{margin-left:8px;font-size:.9rem;opacity:.85}
+.ctl{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.ctl:hover{transform:scale(1.1);box-shadow:0 0 0 3px rgba(255,253,247,.5)}.ctl:focus-visible{outline:3px solid var(--butter)}
+.close{position:absolute;top:14px;right:14px;background:#F6E5EF;color:#765267;z-index:2}.prev{background:#E5EDE2;color:#52694F}.next{background:#F8F0CB;color:#796A3F}
+/* particles + sparkles */
+#particles{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.p{position:absolute;bottom:-20px;border-radius:50%;opacity:0;animation:float linear infinite}
+@keyframes float{0%{transform:translate(0,0);opacity:0}15%{opacity:.5}85%{opacity:.4}100%{transform:translate(var(--dx),-110vh);opacity:0}}
+.spark{position:fixed;pointer-events:none;z-index:200;font-size:12px;animation:spark .8s ease-out forwards}
+@keyframes spark{to{opacity:0;transform:translate(var(--sx),var(--sy)) scale(.3)}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.doodle{width:44px}
+.lb{grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;align-items:center}.lb-fig{grid-column:1/-1;grid-row:1}.lb-img{max-height:calc(100vh - 170px);max-height:calc(100dvh - 170px)}
+.prev{justify-self:end;margin-right:10px}.next{justify-self:start;margin-left:10px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#particles{display:none}}
+
+/* ===== site navigation (same header as the other pages) ===== */
+.skip{position:absolute;left:-999px;top:8px;background:#fffdf8;color:#24402f;padding:.5rem 1rem;z-index:99;border-radius:8px}.skip:focus{left:8px}
+.site-header{--h-blush:#fbe3e4;--h-paper:#fffdf8;--h-forest:#24402f;--h-rose:#e9a9b4;--h-sage:#9db79a;--h-ease:cubic-bezier(.3,.7,.2,1);
+position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem clamp(1rem,4vw,3rem);padding-top:calc(.7rem + env(safe-area-inset-top,0px));
+background:color-mix(in srgb,var(--h-blush) 82%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--h-sage) 45%,transparent);
+font:400 1.05rem/1.7 "DM Sans",system-ui,sans-serif;color:var(--h-forest)}
+.site-header .brandwrap{display:flex;align-items:center;gap:.7rem}
+.site-header .brand{font:italic 500 1.7rem/1 "Cormorant Garamond",Georgia,serif;text-decoration:none;color:var(--h-forest)}
+#logo{position:relative;width:54px;height:54px;border:0;background:none;cursor:pointer;padding:0;border-radius:50%}
+#logo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+#logo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+#logo .spiral{stroke-dasharray:260;stroke-dashoffset:260;opacity:0}
+#logo.go{animation:bounce .8s var(--h-ease)}#logo.go .spiral{animation:draw .8s ease-out}
+@keyframes bounce{0%{transform:none}25%{transform:translateY(-9px) rotate(-14deg) scale(1.12)}55%{transform:translateY(1px) rotate(8deg)}80%{transform:rotate(-3deg)}100%{transform:none}}
+@keyframes draw{0%{stroke-dashoffset:260;opacity:1}70%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.site-header nav ul{display:flex;gap:clamp(.8rem,2vw,1.8rem);list-style:none;margin:0;padding:0}
+.site-header nav a{text-decoration:none;color:inherit;font-size:.95rem;padding:.3rem .1rem;background:linear-gradient(var(--h-rose),var(--h-rose)) 0 100%/0 2px no-repeat;transition:color .3s,background-size .35s var(--h-ease)}
+.site-header nav a:hover,.site-header nav a[aria-current="page"]{color:#b4586b;background-size:100% 2px}
+#menu{display:none;border:1px solid var(--h-sage);background:var(--h-paper);color:var(--h-forest);border-radius:99px;padding:.4rem .9rem;font:inherit;cursor:pointer}
+@media (max-width:720px){#menu{display:block}.site-header nav{position:absolute;top:100%;left:0;right:0;background:var(--h-blush);padding:1rem 1.5rem;display:none;border-bottom:1px solid var(--h-sage)}.site-header nav.open{display:block}.site-header nav ul{flex-direction:column;gap:.6rem}}
+@media (prefers-reduced-motion:reduce){#logo.go{outline:3px solid var(--h-rose);outline-offset:3px}}
+/* video with a little cat */
+.video{margin:50px auto 0;text-align:center}
+.vcard{position:relative;margin:26px auto 0;max-width:460px;background:var(--paper);border:1.5px solid var(--sage);border-radius:16px;padding:14px 14px 10px;box-shadow:0 3px 0 rgba(169,184,145,.45)}
+.v-ears{position:absolute;left:0;top:-25px;width:100%;height:26px;pointer-events:none}
+.vframe{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;display:grid;place-items:center;background:linear-gradient(160deg,var(--blush),#e5ede2) center/cover no-repeat}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.v-ph{position:absolute;left:0;right:0;bottom:12px;font:1.25rem "Caveat","Segoe Print",cursive;color:var(--sage-d)}
+.v-note{position:absolute;inset:0;z-index:2;display:grid;place-content:center;gap:.6rem;padding:1.2rem;text-align:center;background:var(--paper,#fffdf8);color:var(--forest,#24402f);font:1.2rem/1.35 "Caveat","Segoe Print",cursive}
+.v-shield{position:absolute;inset:0;z-index:1;cursor:pointer}
+.v-bar{position:absolute;left:8px;right:8px;bottom:8px;z-index:3;display:flex;align-items:center;gap:.5rem;padding:.25rem .7rem;border-radius:99px;background:rgba(255,253,247,.9);color:var(--sage-d,#4f6b55)}
+.v-bar button{border:0;background:none;color:inherit;font-size:1rem;min-width:32px;height:32px;cursor:pointer;border-radius:50%}
+.v-bar button:focus-visible,.v-bar input:focus-visible{outline:2px solid var(--rose,#e9a9b4);outline-offset:2px}
+.v-bar input{flex:1;accent-color:var(--rose,#e9a9b4);cursor:pointer}
+.vframe:fullscreen{aspect-ratio:auto;border-radius:0;width:100%;height:100%}
+.play{position:relative;z-index:1;width:132px;max-width:40%;padding:0;border:0;background:none;cursor:pointer;transition:transform .25s}
+.play svg{display:block;width:100%;height:auto;filter:drop-shadow(0 4px 6px rgba(74,63,51,.25))}
+.play:hover{transform:scale(1.08) rotate(-3deg)}
+.paw{position:absolute;width:26px;opacity:.4;pointer-events:none}.paw.p1{left:16px;bottom:10px;rotate:-18deg}.paw.p2{right:16px;bottom:10px;rotate:16deg}
+.vcard figcaption{font-family:"Caveat","Segoe Print",cursive;font-size:1.2rem;color:var(--sage-d);padding-top:6px}
+</style><script src="music.js" defer></script>
+</head>
+<body><a class="skip" href="#main">Skip to content</a>
+<div id="particles" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="brandwrap">
+    <!-- CHANGE YOUR LOGO: replace the file name in the img src below -->
+    <button id="logo" type="button" aria-label="shayne.com logo (plays a small animation)">
+      <img src="images/logo.jpg" alt="" width="60" height="60">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="spiral" d="M50 50c4-2 7 3 3 6-6 4-14-2-11-10 3-9 16-11 23-3 8 9 3 24-9 27-14 3-26-8-24-22" fill="none" stroke="#e0a92f" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <a class="brand" href="index.html">shayne.com</a>
+  </div>
+  <button id="menu" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+  <!-- NAVIGATION: edit the links here. Keep this same block in every page. -->
+  <nav id="nav" aria-label="Main"><ul>
+    <li><a href="index.html">Home</a></li><li><a href="aboutme.html">About me</a></li><li><a href="gallery.html" aria-current="page">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+</header>
+<div class="head"><svg class="doodle" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 95V50" stroke="#6b7a4f" stroke-width="3" fill="none"/><path d="M50 78c-18-2-26-12-28-22 16 0 26 8 28 22zM50 66c14-4 22-12 24-22-14 2-22 10-24 22z" fill="#a9b891"/><g fill="#f4c9cf" stroke="#e8a5b0"><circle cx="50" cy="26" r="11"/><circle cx="64" cy="36" r="11"/><circle cx="36" cy="36" r="11"/><circle cx="59" cy="50" r="11"/><circle cx="41" cy="50" r="11"/></g><circle cx="50" cy="38" r="8" fill="#f6e7a8" stroke="#d9b84a"/></svg><p class="site">shayne.com</p><h1>my little gallery ♡</h1><p class="hand">little moments, softly kept.</p></div>
+<main id="main" tabindex="-1"><!-- GALLERY: exactly 12 cards. To use your photos, replace images/photo1.jpg … photo12.jpg (same file names)
+     or change each src. Edit the alt text and the figcaption for each photo. -->
+<ul class="grid">
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 1"><img src="images/babi.jpg" alt="Sample photo 1. Replace with a description of your own photograph." loading="lazy"></button><figcaption>baby pic</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 2"><img src="images/babu.jpg" alt="Sample placeholder photo 2. Replace with a description of your own photograph." loading="lazy"></button><figcaption>baby pic</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 3"><img src="images/babus.jpg" alt="Sample placeholder photo 3. Replace with a description of your own photograph." loading="lazy"></button><figcaption>baby pic</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 4"><img src="images/baby.jpg" alt="Sample placeholder photo 4. Replace with a description of your own photograph." loading="lazy"></button><figcaption>marites</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 5"><img src="images/babun.jfif" alt="Sample placeholder photo 5. Replace with a description of your own photograph." loading="lazy"></button><figcaption>my babies</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 6"><img src="images/osang.jfif" alt="Sample placeholder photo 6. Replace with a description of your own photograph." loading="lazy"></button><figcaption>osang</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 7"><img src="images/crochet.jpg" alt="Sample placeholder photo 7. Replace with a description of your own photograph." loading="lazy"></button><figcaption>favorite hobby</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 8"><img src="images/roblox.jpg" alt="Sample placeholder photo 8. Replace with a description of your own photograph." loading="lazy"></button><figcaption>favorite game</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 9"><img src="images/potcor.jpg" alt="Sample placeholder photo 9. Replace with a description of your own photograph." loading="lazy"></button><figcaption>favorite food</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 10"><img src="images/look.jfif" alt="Sample placeholder photo 10. Replace with a description of your own photograph." loading="lazy"></button><figcaption>7 years from now</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 11"><img src="images/67.jfif" alt="Sample placeholder photo 11. Replace with a description of your own photograph." loading="lazy"></button><figcaption>7 years from now</figcaption></figure></li>
+<li><figure class="card"><button class="thumb" type="button" aria-label="Open photo 12"><img src="images/reading.jfif" alt="Sample placeholder photo 12. Replace with a description of your own photograph." loading="lazy"></button><figcaption>7 years from now</figcaption></figure></li>
+</ul>
+
+<!-- ============ VIDEO ============ -->
+<section class="video" aria-labelledby="vid-h">
+  <h2 id="vid-h" class="hand">a little video ♡</h2>
+  <figure class="vcard">
+    <svg class="v-ears" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g fill="#fffdf7" stroke="#a9b891" stroke-width="1.5" stroke-linejoin="round"><path d="M34 27 44 2 74 27"/><path d="M326 27 356 2 366 27"/></g><g fill="#f4c9cf"><path d="M46 24 50 11 63 24Z"/><path d="M337 24 350 11 354 24Z"/></g></svg>
+    <!-- ✿ YOUTUBE: paste your YouTube link between the quotes in data-youtube="" (a normal link like https://www.youtube.com/watch?v=… or a youtu.be link works) -->
+    <div class="vframe" id="vframe" data-youtube="https://youtu.be/PEOwqZoDEGI?si=kW7OZXP2SW5CyL9v">
+      <button class="play" type="button" aria-label="Play video">
+        <svg viewBox="0 0 120 84" aria-hidden="true" focusable="false"><g stroke="#e8a5b0" stroke-width="2" stroke-linecap="round" fill="none"><path d="M6 40 28 44M6 52 28 52M8 64 28 58M114 40 92 44M114 52 92 52M112 64 92 58"/></g>
+          <g fill="#fffdf7" stroke="#e8a5b0" stroke-width="2.5" stroke-linejoin="round"><path d="M33 34 31 8 52 22Z"/><path d="M87 34 89 8 68 22Z"/><circle cx="60" cy="50" r="30"/></g>
+          <path d="M34 28 35 14 44 22Z" fill="#f4c9cf"/><path d="M86 28 85 14 76 22Z" fill="#f4c9cf"/><path d="M52 36v28l24-14Z" fill="#e8a5b0"/></svg>
+      </button>
+      <span class="v-ph">paste your YouTube link in the code ♡</span>
+    </div>
+    <svg class="paw p1" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="#a9b891"><ellipse cx="20" cy="27" rx="9" ry="7"/><ellipse cx="8" cy="16" rx="3.6" ry="4.6"/><ellipse cx="16" cy="9" rx="3.6" ry="4.6"/><ellipse cx="25" cy="9" rx="3.6" ry="4.6"/><ellipse cx="32" cy="16" rx="3.6" ry="4.6"/></g></svg>
+    <svg class="paw p2" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="#e8a5b0"><ellipse cx="20" cy="27" rx="9" ry="7"/><ellipse cx="8" cy="16" rx="3.6" ry="4.6"/><ellipse cx="16" cy="9" rx="3.6" ry="4.6"/><ellipse cx="25" cy="9" rx="3.6" ry="4.6"/><ellipse cx="32" cy="16" rx="3.6" ry="4.6"/></g></svg>
+    <figcaption>my favorite music</figcaption>
+  </figure>
+</section>
+</main>
+<footer>collected with love ♡ — shayne.com</footer>
+<!-- LIGHTBOX -->
+<div id="lb" class="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+<button class="ctl close" type="button" aria-label="Close photo viewer"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<button class="ctl nav prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<figure class="lb-fig"><img class="lb-img" alt=""><figcaption><span class="lb-cap"></span> <span class="lb-count" aria-live="polite"></span></figcaption></figure>
+<button class="ctl nav next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<script>
+/* shayne.com gallery — lightbox, particles, sparkle cursor */
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ===== LIGHTBOX =====
+     It reads each photo's src, alt text and caption straight from the gallery cards in index.html,
+     so you only edit the HTML to change photos. */
+  var thumbs=[].slice.call(document.querySelectorAll('.thumb'));
+  var lb=document.getElementById('lb'),img=lb.querySelector('.lb-img'),cap=lb.querySelector('.lb-cap'),cnt=lb.querySelector('.lb-count');
+  var closeB=lb.querySelector('.close'),prevB=lb.querySelector('.prev'),nextB=lb.querySelector('.next');
+  var cur=0,opener=null,isOpen=false,timer;
+
+  function show(i){                              // update image, caption and counter together
+    cur=(i+thumbs.length)%thumbs.length;         // wraps: 12 → 1 and 1 → 12
+    var t=thumbs[cur],im=t.querySelector('img');
+    img.style.animation='none';void img.offsetWidth;img.style.animation='';   // replay the soft fade
+    img.src=im.getAttribute('src');img.alt=im.alt;
+    cap.textContent=t.parentNode.querySelector('figcaption').textContent;
+    cnt.textContent=(cur+1)+' / '+thumbs.length;
+  }
+  function open(i){
+    clearTimeout(timer);opener=thumbs[i];isOpen=true;show(i);
+    lb.hidden=false;document.body.classList.add('lock');          // lock background scrolling
+    requestAnimationFrame(function(){lb.classList.add('open');});
+    closeB.focus();                                               // move focus into the lightbox
+  }
+  function close(){
+    if(!isOpen)return;isOpen=false;lb.classList.remove('open');document.body.classList.remove('lock');
+    timer=setTimeout(function(){lb.hidden=true;},reduce?0:250);
+    if(opener)opener.focus();                                     // return focus to the photo
+  }
+  thumbs.forEach(function(t,i){t.addEventListener('click',function(){open(i);});});
+  prevB.addEventListener('click',function(){show(cur-1);});
+  nextB.addEventListener('click',function(){show(cur+1);});
+  closeB.addEventListener('click',close);
+  // Backdrop closes; clicks on the image, caption or any button do not.
+  lb.addEventListener('click',function(e){if(!e.target.closest('button,img,figcaption'))close();});
+  document.addEventListener('keydown',function(e){
+    if(!isOpen)return;
+    if(e.key==='Escape'){close();}
+    else if(e.key==='ArrowLeft'){show(cur-1);}
+    else if(e.key==='ArrowRight'){show(cur+1);}
+    else if(e.key==='Tab'){                                       // keep focus inside the lightbox
+      var f=[closeB,prevB,nextB],i=f.indexOf(document.activeElement);
+      e.preventDefault();f[i<0?0:(i+(e.shiftKey?f.length-1:1))%f.length].focus();
+    }
+  });
+
+  if(reduce)return;
+  /* ===== FLOATING PARTICLES (20 tiny specks, behind content) ===== */
+  var box=document.getElementById('particles'),cols=['#f4c9cf','#fffdf7','#f6e7a8'];
+  for(var k=0;k<20;k++){var p=document.createElement('span');p.className='p';var s=3+Math.random()*5;
+    p.style.cssText='left:'+Math.random()*100+'%;width:'+s+'px;height:'+s+'px;background:'+cols[k%3]+';--dx:'+(Math.random()*80-40)+'px;animation-duration:'+(22+Math.random()*25)+'s;animation-delay:-'+Math.random()*40+'s';
+    box.appendChild(p);}
+  /* ===== SPARKLE CURSOR (mouse only, throttled) ===== */
+  if(matchMedia('(hover: none)').matches)return;
+  var last=0,g=['✦','·','✧','♡'],c=['#e8a5b0','#e6cf7a','#c9b27a'];
+  addEventListener('mousemove',function(e){var n=Date.now();if(n-last<80)return;last=n;
+    var s=document.createElement('span');s.className='spark';s.textContent=g[Math.random()*4|0];
+    s.style.cssText='left:'+(e.clientX+Math.random()*10-5)+'px;top:'+(e.clientY+Math.random()*10)+'px;color:'+c[Math.random()*3|0]+';--sx:'+(Math.random()*20-10)+'px;--sy:'+(Math.random()*24+6)+'px';
+    document.body.appendChild(s);setTimeout(function(){s.remove();},800);});
+})();
+</script>
+<script>
+/* site navigation: menu button, logo animation */
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,menu=document.getElementById('menu'),nav=document.getElementById('nav'),logo=document.getElementById('logo');
+  function close(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}
+  menu.addEventListener('click',function(){var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o);});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});
+  var busy=false;
+  logo.addEventListener('click',function(){
+    if(window.scrollY>10)scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    if(busy)return;busy=true;logo.classList.add('go');
+    if(!reduce){var r=logo.getBoundingClientRect(),g=['♡','✿','✦','♪','✧'],c=['#e8a5b0','#e6cf7a','#6b7a4f'];
+      for(var i=0;i<8;i++){var s=document.createElement('span');s.className='spark';s.textContent=g[i%5];
+        s.style.cssText='left:'+(r.left+r.width/2)+'px;top:'+(r.top+r.height/2)+'px;font-size:16px;color:'+c[i%3]+';--sx:'+(Math.random()*100-50)+'px;--sy:'+(-20-Math.random()*55)+'px';
+        document.body.appendChild(s);(function(el){setTimeout(function(){el.remove();},850);})(s);}}
+    setTimeout(function(){logo.classList.remove('go');busy=false;},reduce?400:850);
+  });
+})();
+</script>
+<script>
+/* youtube spot: reads the link in data-youtube and plays it when the cat button is pressed */
+(function(){
+  var box=document.getElementById('vframe');if(!box)return;
+  var raw=(box.getAttribute('data-youtube')||'').trim(),btn=box.querySelector('.play'),ph=box.querySelector('.v-ph');
+  var m=raw.match(/(?:v=|youtu\.be\/|embed\/|shorts\/|live\/)([A-Za-z0-9_-]{11})/)||raw.match(/^([A-Za-z0-9_-]{11})$/);
+  if(!m){btn.disabled=true;btn.style.cursor='default';btn.setAttribute('aria-label','Video not added yet');return;}
+  var id=m[1];ph.remove();
+  box.style.backgroundImage='url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)';
+  var origin=/^https?:/.test(location.protocol)?location.origin:'';
+  function note(msg){var d=document.createElement('div');d.className='v-note';d.textContent=msg;box.appendChild(d);}
+  function whenYT(cb){
+    if(window.YT&&YT.Player)return cb();
+    var prev=window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady=function(){if(typeof prev==='function')prev();cb();};
+    if(!document.querySelector('script[src*="youtube.com/iframe_api"]')){var sc=document.createElement('script');sc.src='https://www.youtube.com/iframe_api';sc.async=true;document.head.appendChild(sc);}
+  }
+  btn.addEventListener('click',function(){
+    window.dispatchEvent(new Event('sh-video-play'));   // pauses the background music
+    if(!origin){note('Preview tip: the video plays once this page is opened from a web address (your live site, or localhost), not from a file on your computer \u2661');return;}
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin='+encodeURIComponent(origin);
+    f.title='Video player';f.allow='autoplay; encrypted-media; picture-in-picture';f.referrerPolicy='strict-origin-when-cross-origin';f.tabIndex=-1;
+    box.innerHTML='';box.appendChild(f);
+    // our own controls on top, so everything stays on this page (no clicking through to YouTube)
+    var shield=document.createElement('div');shield.className='v-shield';
+    var bar=document.createElement('div');bar.className='v-bar';
+    bar.innerHTML='<button type="button" class="pp" aria-label="Pause">\u275A\u275A</button><input class="sk" type="range" min="0" max="1000" value="0" aria-label="Seek"><button type="button" class="mu" aria-label="Mute">\uD83D\uDD0A</button><button type="button" class="fs" aria-label="Full screen">\u26F6</button>';
+    box.appendChild(shield);box.appendChild(bar);
+    var pp=bar.querySelector('.pp'),sk=bar.querySelector('.sk'),mu=bar.querySelector('.mu'),fs=bar.querySelector('.fs'),p=null,drag=false;
+    function toggle(){if(!p)return;try{if(p.getPlayerState()===1)p.pauseVideo();else p.playVideo();}catch(e){}}
+    shield.addEventListener('click',toggle);pp.addEventListener('click',toggle);
+    mu.addEventListener('click',function(){if(!p)return;try{if(p.isMuted()){p.unMute();mu.textContent='\uD83D\uDD0A';}else{p.mute();mu.textContent='\uD83D\uDD07';}}catch(e){}});
+    fs.addEventListener('click',function(){if(document.fullscreenElement){document.exitFullscreen();}else{var r=box.requestFullscreen||box.webkitRequestFullscreen;if(r)r.call(box);}});
+    sk.addEventListener('input',function(){drag=true;});
+    sk.addEventListener('change',function(){drag=false;try{p.seekTo(sk.value/1000*p.getDuration(),true);}catch(e){}});
+    whenYT(function(){
+      p=new YT.Player(f,{events:{
+        onStateChange:function(e){pp.textContent=e.data===1?'\u275A\u275A':'\u25B6';pp.setAttribute('aria-label',e.data===1?'Pause':'Play');},
+        onError:function(e){console.warn('Video could not play (YouTube error '+e.data+')');shield.remove();bar.remove();f.remove();note('Sorry, this video can\u2019t be played here right now.');}
+      }});
+      setInterval(function(){try{if(p&&!drag&&p.getDuration()>0)sk.value=p.getCurrentTime()/p.getDuration()*1000;}catch(e){}},400);
+    });
+  });
+})();
+</script>
+</body></html>
